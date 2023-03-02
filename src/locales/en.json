@@ -1,5 +1,21 @@
 {
   "dashboard-admin": "Dashboard Admin",
   "not-found-page": "Page Not Found",
-  "home": "Home"
+  "dashboard": "Dashboard",
+  "home": "Home",
+  "create": "create",
+  "update": "update",
+  "view": "view",
+  "edit": "edit",
+  "delete": "delete",
+  "confirm": "confirm",
+  "cancel": "cancel",
+  "not found data": "Not found data!",
+  "create-success": "Successful new creation!",
+  "edit-success": "Update successful!",
+  "delete-success": "Delete successful!",
+  "create-fail": "New creation failed!",
+  "edit-fail": "Edit failed!",
+  "delete-fail": "Delete failed!",
+  "alert-delete": "Are you sure you want to delete this {attr}?"
 }

@@ -1,5 +1,4 @@
 import { createApp } from "vue";
-import "./style.css";
 import App from "./App.vue";
 
 import router from "./router";
@@ -7,7 +6,8 @@ import i18n from "./i18n";
 import store from "./store";
 
 // import css assets
-import "bootstrap/dist/css/bootstrap.css";
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
 
 const app = createApp(App);
 app.use(router);

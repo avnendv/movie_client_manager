@@ -1,5 +1,21 @@
 {
   "dashboard-admin": "Trung tâm điều hướng",
   "not-found-page": "Không tìm thấy trang",
-  "home": "Trang chủ"
+  "dashboard": "Trung tâm điều hướng",
+  "home": "Trang chủ",
+  "create": "thêm",
+  "update": "cập nhật",
+  "view": "xem",
+  "edit": "chỉnh sửa",
+  "delete": "xóa",
+  "confirm": "xác nhận",
+  "cancel": "hủy bỏ",
+  "not found data": "Không tìm thấy dữ liệu!",
+  "create-success": "Tạo mới thành công!",
+  "edit-success": "Chỉnh sửa thành công!",
+  "delete-success": "Xóa thành công!",
+  "create-fail": "Tạo mới thất bại!",
+  "edit-fail": "Chỉnh sửa thất bại!",
+  "delete-fail": "Xóa thất bại!",
+  "alert-delete": "Bạn có chắc muốn xóa {attr} này không?"
 }
