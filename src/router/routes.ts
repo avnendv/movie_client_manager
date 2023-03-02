@@ -1,6 +1,7 @@
+import { RouteRecordRaw } from "vue-router";
 import { NotFoundPage } from "../pages";
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: "/admin",
     component: () =>
