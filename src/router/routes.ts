@@ -1,22 +1,30 @@
+import { NotFoundPage } from "../pages";
+
 const routes = [
   {
-    path: "/",
+    path: "/admin",
     component: () =>
       import(
         /* webpackChunkName: "admin-layout" */ "../layouts/MainLayout.vue"
       ),
-    redirect: "dashboard",
+    redirect: "admin/dashboard",
     children: [
       {
         path: "dashboard",
         name: "dashboard",
-        meta: { title: "dashboard admin" },
+        meta: { title: "dashboard-admin" },
         component: () =>
           import(
             /* webpackChunkName: "dashboard-page" */ "../pages/DashboardPage.vue"
           ),
       },
     ],
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found-page",
+    meta: { title: "not-found-page" },
+    component: NotFoundPage,
   },
 ];
 

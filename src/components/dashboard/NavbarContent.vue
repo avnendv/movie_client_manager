@@ -10,11 +10,11 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <router-link :to="{ path: '#' }" class="nav-link"
-          >Home</router-link
+          >{{ $t("home") }}</router-link
         >
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">{{ $t("contact") }}</a>
       </li>
     </ul>
 

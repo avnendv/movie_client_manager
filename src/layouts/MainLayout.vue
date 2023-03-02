@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import NavbarContent from "../components/dashboard/NavbarContent.vue";
-import SideBarContent from "../components/dashboard/SideBarContent.vue";
-import MainContent from "../components/dashboard/MainContent.vue";
-import FooterContent from "../components/dashboard/FooterContent.vue";
-
+import {
+  NavbarContent,
+  SideBarContent,
+  MainContent,
+  FooterContent,
+} from "../components/dashboard";
 </script>
 
 <template>
