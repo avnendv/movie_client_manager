@@ -8,7 +8,7 @@ import { NavbarContent, FooterContent } from "./index";
       <navbar-content />
       <!--Nav End-->
     </div>
-    <div class="conatiner-fluid content-inner mt-n5 py-0">
+    <div class="conatiner-fluid content-inner mt-0 py-0">
       <div class="row">
         <div class="col-md-12 col-lg-12">
           <!-- your content here -->
@@ -21,3 +21,9 @@ import { NavbarContent, FooterContent } from "./index";
     <!-- Footer Section End -->
   </main>
 </template>
+
+<style scoped>
+.iq-banner:not(.hide)+.content-inner {
+  margin-top: 0 !important;
+}
+</style>

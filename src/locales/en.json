@@ -17,5 +17,9 @@
   "create-fail": "New creation failed!",
   "edit-fail": "Edit failed!",
   "delete-fail": "Delete failed!",
-  "alert-delete": "Are you sure you want to delete this {attr}?"
+  "alert-delete": "Are you sure you want to delete this {attr}?",
+  "category-manager": "Category management",
+  "category-detail": "Detail category",
+  "category-create": "Create new category",
+  "category-edit": "Edit category"
 }

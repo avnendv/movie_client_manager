@@ -17,5 +17,9 @@
   "create-fail": "Tạo mới thất bại!",
   "edit-fail": "Chỉnh sửa thất bại!",
   "delete-fail": "Xóa thất bại!",
-  "alert-delete": "Bạn có chắc muốn xóa {attr} này không?"
+  "alert-delete": "Bạn có chắc muốn xóa {attr} này không?",
+  "category-manager": "Quản lý danh mục",
+  "category-detail": "Chi tiết danh mục",
+  "category-create": "Thêm mới danh mục",
+  "category-edit": "Chỉnh sửa danh mục"
 }

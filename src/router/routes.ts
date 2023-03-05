@@ -19,6 +19,51 @@ const routes: RouteRecordRaw[] = [
             /* webpackChunkName: "dashboard-page" */ "../pages/DashboardPage.vue"
           ),
       },
+      {
+        path: "category",
+        component: () =>
+          import(
+            /* webpackChunkName: "category-page" */ "../layouts/EmptyLayout.vue"
+          ),
+        children: [
+          {
+            path: "",
+            name: "category-manager",
+            meta: { title: "category-manager" },
+            component: () =>
+              import(
+                /* webpackChunkName: "category-page" */ "../pages/category/CategoryListPage.vue"
+              ),
+          },
+          {
+            path: ":id",
+            name: "category-detail",
+            meta: { title: "category-detail" },
+            component: () =>
+              import(
+                /* webpackChunkName: "category-page" */ "../pages/category/CategoryDetailPage.vue"
+              ),
+          },
+          {
+            path: "create",
+            name: "category-create",
+            meta: { title: "category-create" },
+            component: () =>
+              import(
+                /* webpackChunkName: "category-page" */ "../pages/category/CategoryCreatePage.vue"
+              ),
+          },
+          {
+            path: "edit/:id",
+            name: "category-edit",
+            meta: { title: "category-edit" },
+            component: () =>
+              import(
+                /* webpackChunkName: "category-page" */ "../pages/category/CategoryEditPage.vue"
+              ),
+          },
+        ],
+      },
     ],
   },
   {
