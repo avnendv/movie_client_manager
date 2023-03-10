@@ -1,8 +1,8 @@
 <template>
   <div>
-    Dashboard Page!
+    {{ new Date().toDateString() }}<br />
+    Welcome to admin manager <br />
+    Wish a good day!!!
   </div>
 </template>
-<style>
-
-</style>
+<style></style>

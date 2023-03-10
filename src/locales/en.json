@@ -21,5 +21,10 @@
   "category-manager": "Category management",
   "category-detail": "Detail category",
   "category-create": "Create new category",
-  "category-edit": "Edit category"
+  "category-edit": "Edit category",
+  "category": {
+    "name": "Name",
+    "slug": "Slug",
+    "parent-name": "Parent category"
+  }
 }

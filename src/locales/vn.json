@@ -21,5 +21,10 @@
   "category-manager": "Quản lý danh mục",
   "category-detail": "Chi tiết danh mục",
   "category-create": "Thêm mới danh mục",
-  "category-edit": "Chỉnh sửa danh mục"
+  "category-edit": "Chỉnh sửa danh mục",
+  "category": {
+    "name": "Tên",
+    "slug": "Định danh",
+    "parent-name": "Danh mục cha"
+  }
 }

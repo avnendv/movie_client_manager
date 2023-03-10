@@ -8,7 +8,7 @@ import { NavbarContent, FooterContent } from "./index";
       <navbar-content />
       <!--Nav End-->
     </div>
-    <div class="conatiner-fluid content-inner mt-0 py-0">
+    <div class="conatiner-fluid content-inner mt-0 py-5">
       <div class="row">
         <div class="col-md-12 col-lg-12">
           <!-- your content here -->
