@@ -25,6 +25,7 @@
   "category": {
     "name": "Name",
     "slug": "Slug",
-    "parent-name": "Parent category"
+    "parent-name": "Parent category",
+    "not-exists": "Not found category!"
   }
 }

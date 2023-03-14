@@ -1,4 +1,24 @@
+<script setup lang="ts">
+import { ComputedRef, computed } from "vue";
+import { useStore } from "vuex";
+import { Category } from "../../models";
+import { CategoryState } from "../../store/modules/category/types";
+
+import { LoadingComponent, CategoryRecord } from "../../components";
+import { getCategoryParentName } from "../../utils";
+
+const store = useStore();
+const categoryStoreState = store.state["category"] as CategoryState;
+const isPending = computed(() => categoryStoreState.isPending);
+const categories: ComputedRef<Category[]> = computed(
+  () => categoryStoreState.list
+);
+store.dispatch("category/list");
+
+</script>
+
 <template>
+  <loading-component :isShow="isPending" />
   <div class="row">
     <div class="col-sm-12">
       <div class="card">
@@ -7,8 +27,12 @@
             <h4 class="card-title mb-0">{{ $t("category-manager") }}</h4>
           </div>
           <div class="">
-            <router-link :to="{name: 'category-create'}" class="text-center btn btn-primary btn-icon mt-lg-0 mt-md-0 mt-3">
-              <i class="fas fa-plus"></i> <span>{{ $t("category-create") }}</span>
+            <router-link
+              :to="{ name: 'category-create' }"
+              class="text-center btn btn-primary btn-icon mt-lg-0 mt-md-0 mt-3"
+            >
+              <i class="fas fa-plus"></i>
+              <span>{{ $t("category-create") }}</span>
             </router-link>
           </div>
         </div>
@@ -25,23 +49,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="">
-                  <td class="">1</td>
-                  <td class="">test</td>
-                  <td class="">test</td>
-                  <td class="">test</td>
-                  <td class="">
-                    <router-link :to="{name: 'category-detail', params: {id: 1}}" class="btn btn-sm btn-icon text-info flex-end">
-                      <i class="fas fa-eye"></i>
-                    </router-link>
-                    <router-link :to="{name: 'category-edit', params: {id: 1}}" class="btn btn-sm btn-icon text-primary flex-end">
-                      <i class="fas fa-edit"></i>
-                    </router-link>
-                    <router-link to="#" class="btn btn-sm btn-icon text-danger">
-                      <i class="fas fa-trash"></i>
-                    </router-link>
-                  </td>
-                </tr>
+                <category-record
+                  v-for="category in categories"
+                  :key="category.id"
+                  :id="category.id"
+                  :name="category.name"
+                  :slug="category.slug"
+                  :parent="getCategoryParentName(category.parent_id, categories)"
+                />
               </tbody>
             </table>
           </div>

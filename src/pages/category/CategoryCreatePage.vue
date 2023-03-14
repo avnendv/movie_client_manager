@@ -27,7 +27,7 @@
         <button type="submit" class="btn btn-primary">
           {{ $t("create") }}
         </button>
-        <button type="reset" class="ms-1 btn btn-secondary">
+        <button type="button" @click="$router.go(-1)" class="ms-1 btn btn-secondary">
           {{ $t("cancel") }}
         </button>
       </div>

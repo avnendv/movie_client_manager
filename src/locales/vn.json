@@ -25,6 +25,7 @@
   "category": {
     "name": "Tên",
     "slug": "Định danh",
-    "parent-name": "Danh mục cha"
+    "parent-name": "Danh mục cha",
+    "not-exists": "Không tìm thấy thể loại!"
   }
 }

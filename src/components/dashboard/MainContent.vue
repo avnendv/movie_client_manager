@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavbarContent, FooterContent } from "./index";
+import { NavbarContent, FooterContent } from "./";
 </script>
 <template>
   <main class="main-content">

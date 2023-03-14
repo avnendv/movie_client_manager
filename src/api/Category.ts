@@ -1,11 +1,12 @@
+import { ListParams } from "../models";
 import axiosClient from "./Base";
 
-const URL = '/category';
+const URL = "/category";
 
 const CategoryApi = {
-  list(params: any) {
+  list(params: ListParams) {
     const url = URL;
-    return axiosClient.get(url, {params});
+    return axiosClient.get(url, { params });
   },
   show(id: number) {
     const url = `${URL}/${id}`;
