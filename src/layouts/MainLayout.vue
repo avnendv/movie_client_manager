@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SideBarContent, MainContent } from "../components/dashboard";
+import { SideBarContent, MainContent } from "@/components/dashboard";
 </script>
 
 <template>

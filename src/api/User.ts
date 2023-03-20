@@ -1,4 +1,4 @@
-import { RegisterPayLoad, LoginPayLoad, User, Response } from "../models";
+import { RegisterPayLoad, LoginPayLoad, User, Response } from "@/models";
 import axiosClient from "./Base";
 
 const UserApi = {

@@ -119,7 +119,7 @@
                 aria-expanded="false"
               >
                 <img
-                  src="../../assets/images/avatars/01.png"
+                  src="@assets/images/avatars/01.png"
                   alt="User-Profile"
                   class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded"
                 />

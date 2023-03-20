@@ -1,5 +1,5 @@
 import { MutationTree } from "vuex";
-import { Category } from "../../../models";
+import { Category } from "@/models";
 import { CategoryState } from "./types";
 
 const mutations: MutationTree<CategoryState> = {

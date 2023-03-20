@@ -1,4 +1,4 @@
-import { Category } from "../../../models";
+import { Category } from "@/models";
 import { CategoryState } from "./types";
 
 const state: CategoryState = {

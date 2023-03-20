@@ -1,4 +1,4 @@
-import { ListParams } from "../models";
+import { ListParams } from "@/models";
 import axiosClient from "./Base";
 
 const URL = "/category";

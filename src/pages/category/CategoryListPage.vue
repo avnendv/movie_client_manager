@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ComputedRef, computed } from "vue";
 import { useStore } from "vuex";
-import { Category } from "../../models";
-import { CategoryState } from "../../store/modules/category/types";
+import { Category } from "@/models";
+import { CategoryState } from "@/store/modules/category/types";
 
-import { LoadingComponent, CategoryRecord } from "../../components";
-import { getCategoryParentName } from "../../utils";
+import { LoadingComponent, CategoryRecord } from "@/components";
+import { getCategoryParentName } from "@/utils";
 
 const store = useStore();
 const categoryStoreState = store.state["category"] as CategoryState;

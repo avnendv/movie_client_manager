@@ -2,11 +2,11 @@
 import { computed, ComputedRef, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
-import { Category } from "../../models";
-import { CategoryState } from "../../store/modules/category/types";
-import { getCategoryParentName } from "../../utils";
+import { Category } from "@/models";
+import { CategoryState } from "@/store/modules/category/types";
+import { getCategoryParentName } from "@/utils";
 
-import { LoadingComponent } from "../../components";
+import { LoadingComponent } from "@/components";
 
 const store = useStore();
 const route = useRoute();

@@ -1,8 +1,8 @@
 import { ActionTree } from "vuex";
-import { RootState } from "../../types";
+import { RootState } from "@/store/types";
 import { CategoryState } from "./types";
-import CategoryApi from "../../../api/Category";
-import { ListParams } from "../../../models";
+import CategoryApi from "@/api/Category";
+import { ListParams } from "@/models";
 
 const actions: ActionTree<CategoryState, RootState> = {
   list({ commit }, params: ListParams) {

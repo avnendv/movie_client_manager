@@ -1,4 +1,4 @@
-import { Category } from "../models";
+import { Category } from "@/models";
 
 export const getCategoryParentName = (id: number = 0, data: Category[]) => {
   return data

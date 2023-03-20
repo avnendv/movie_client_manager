@@ -1,12 +1,12 @@
 import { RouteRecordRaw } from "vue-router";
-import { NotFoundPage } from "../pages";
+import { NotFoundPage } from "@/pages";
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/admin",
     component: () =>
       import(
-        /* webpackChunkName: "admin-layout" */ "../layouts/MainLayout.vue"
+        /* webpackChunkName: "admin-layout" */ "@/layouts/MainLayout.vue"
       ),
     redirect: "admin/dashboard",
     children: [
@@ -16,14 +16,14 @@ const routes: RouteRecordRaw[] = [
         meta: { title: "dashboard-admin" },
         component: () =>
           import(
-            /* webpackChunkName: "dashboard-page" */ "../pages/DashboardPage.vue"
+            /* webpackChunkName: "dashboard-page" */ "@/pages/DashboardPage.vue"
           ),
       },
       {
         path: "category",
         component: () =>
           import(
-            /* webpackChunkName: "category-page" */ "../layouts/EmptyLayout.vue"
+            /* webpackChunkName: "category-page" */ "@/layouts/EmptyLayout.vue"
           ),
         children: [
           {
@@ -32,7 +32,7 @@ const routes: RouteRecordRaw[] = [
             meta: { title: "category-manager" },
             component: () =>
               import(
-                /* webpackChunkName: "category-page" */ "../pages/category/CategoryListPage.vue"
+                /* webpackChunkName: "category-page" */ "@/pages/category/CategoryListPage.vue"
               ),
           },
           {
@@ -41,7 +41,7 @@ const routes: RouteRecordRaw[] = [
             meta: { title: "category-detail" },
             component: () =>
               import(
-                /* webpackChunkName: "category-page" */ "../pages/category/CategoryDetailPage.vue"
+                /* webpackChunkName: "category-page" */ "@/pages/category/CategoryDetailPage.vue"
               ),
           },
           {
@@ -50,7 +50,7 @@ const routes: RouteRecordRaw[] = [
             meta: { title: "category-create" },
             component: () =>
               import(
-                /* webpackChunkName: "category-page" */ "../pages/category/CategoryCreatePage.vue"
+                /* webpackChunkName: "category-page" */ "@/pages/category/CategoryCreatePage.vue"
               ),
           },
           {
@@ -59,7 +59,7 @@ const routes: RouteRecordRaw[] = [
             meta: { title: "category-edit" },
             component: () =>
               import(
-                /* webpackChunkName: "category-page" */ "../pages/category/CategoryEditPage.vue"
+                /* webpackChunkName: "category-page" */ "@/pages/category/CategoryEditPage.vue"
               ),
           },
         ],
