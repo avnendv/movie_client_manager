@@ -5,4 +5,8 @@ export interface CategoryState {
   item: Category;
   isPending: boolean;
   isPendingShow: boolean;
+  isPendingStore: boolean;
+  isPendingUpdate: boolean;
+  isPendingDestroy: boolean;
+  isPendingRestore: boolean;
 }

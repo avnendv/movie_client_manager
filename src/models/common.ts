@@ -12,6 +12,11 @@ export interface Response<T> {
   msg?: string;
 }
 
+export interface ErrorIF {
+  name: string;
+  message: string;
+}
+
 export interface ListParams {
   _page?: number;
   _limit?: number;

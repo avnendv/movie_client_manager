@@ -1,36 +1,34 @@
+<script setup lang="ts">
+import { reactive } from "vue";
+import { useStore } from "vuex";
+import { Category, ErrorIF } from "@/models";
+import { useI18n } from "vue-i18n";
+import CategoryForm from "@/components/category/CategoryForm.vue";
+import { useToast } from "@/composables";
+
+const store = useStore();
+const category = reactive({
+  name: "",
+  parent_id: 0,
+});
+const { t } = useI18n();
+const { toastSuccess, toastError } = useToast();
+
+const handleSubmit = async (category: Category) => {
+  try {
+    await store.dispatch("category/store", category);
+    toastSuccess({ title: t("create-success") });
+  } catch (error) {
+    toastError({ title: (error as ErrorIF).message });
+  }
+};
+</script>
+
 <template>
-  <form class="card">
-    <div class="card-header d-flex justify-content-between flex-wrap">
-      <div class="header-title">
-        <h4 class="card-title mb-0">{{ $t("category-create") }}</h4>
-      </div>
-    </div>
-    <div class="row p-4">
-      <div class="form-group col-md-6">
-        <label class="form-label" for="fname">{{ $t("category.name") }}:</label>
-        <input
-          type="text"
-          class="form-control"
-          :placeholder="$t('category.name') + '...'"
-        />
-      </div>
-      <div class="form-group col-md-6">
-        <label class="form-label" for="lname"
-          >{{ $t("category.parent-name") }}:</label
-        >
-        <select class="form-select">
-          <option value="">Choose...</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-12">
-        <button type="submit" class="btn btn-primary">
-          {{ $t("create") }}
-        </button>
-        <button type="button" @click="$router.go(-1)" class="ms-1 btn btn-secondary">
-          {{ $t("cancel") }}
-        </button>
-      </div>
-    </div>
-  </form>
+  <category-form
+    :form-title="$t('category-create')"
+    :btn="$t('create')"
+    :category="category"
+    @submit="handleSubmit"
+  />
 </template>

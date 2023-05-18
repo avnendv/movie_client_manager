@@ -11,6 +11,22 @@ const mutations: MutationTree<CategoryState> = {
     state.isPendingShow = payload;
   },
 
+  SET_IS_PENDING_STORE(state, payload: boolean) {
+    state.isPendingStore = payload;
+  },
+
+  SET_IS_PENDING_UPDATE(state, payload: boolean) {
+    state.isPendingUpdate = payload;
+  },
+
+  SET_IS_PENDING_DESTROY(state, payload: boolean) {
+    state.isPendingDestroy = payload;
+  },
+
+  SET_IS_PENDING_RESTORE(state, payload: boolean) {
+    state.isPendingRestore = payload;
+  },
+
   SET_DATA_LIST(state, payload: Category[]) {
     state.list = payload;
   },

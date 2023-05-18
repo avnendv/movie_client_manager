@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps<{
-  id: number;
+  id?: number;
   name: string;
-  slug: string;
+  slug?: string;
   parent: string;
 }>();
 </script>
